@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keaton Hutchinson's Webpage</title>
+    <meta charset = "utf-8"> 
+    <style>
+html {
+    color:red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+h2 , h1 {
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    border-bottom-width: 2px;
+    color:whitesmoke;
+}
+    </style>
+</head>
+<body>
+    <h1> Keaton Hutchinson's Webpage</h1>
+    <p> <img src="" alt="Picture of Dashing Young Man"> </p>
+    <h2> A little bit about me...</h2>
+    <p>Hi! My name is Keaton Hutchinson, and I was born in Savannah, Georgia on August 5th, 2003.  </p>
+    <p>I moved to New Brighton, PA when I was only 1. I went to New Brighton highschool and got my </p>
+    <p>diploma. This led to me finding a local Univerity, Slippery Rock, to major in Pre-pharmacy. </p>
+    <p>I worked in a pharmacy back home, and this is why I choose that major. I ended up getting to</p>
+    <p>my second year of schooling when I realized I would be miserable if I kept up with this career.</p>
+    <p>Rather than be stuck, I gathered the confidence to confide in myself to choose a new path for</p>
+    <p>the future. This is when I thought about a video game programming class I took in highschool.</p>
+    <p>I realized I throughly enjoyed working with computers and enjoyed writing the code to see the</p>
+    <p>end results. I made my switch to Computing: Information Technology Systems and haven't looked</p>
+    <p>looked past since! Within my first semester, my interest on what I could do with this new found</p>
+    <p>love for programming grew astronomically! I am glad I made the switch to my new major and cannot</p>
+    <p>wait to work within software development, IOS app development, Webdesign, and so much more!</p>
+    <h2> My Hobbies </h2>
+    <p> <ul>
+        <li>Golfing</li>
+        <li>Going to concerts</li>
+        <li>Listening to music. I love rock, country, hip-hop/rap, pop, and R&B!</li>
+        <li>Playing basketball</li>
+        <li>Traveling</li>
+        <li>Playing video games</li>
+        <li>Going to the gym</li>
+        </ul>
+    </p>
+    <h2> Skills and Qualifications</h2>
+    <p> <ul>
+        <li>C++ or C language</li>
+        <li>HTML5 w/ JavaScript</li>
+        <li>Understanding of Relational Database Structures</li>
+        <li>Linux Shell command line</li>
+        <li>Bash</li>
+        <li>Principles of Computer Programming</li>
+        <li>Understanding of Ethical and Legal Challenges within technology </li>
+        <li>Microsoft Office Applications</li>
+        <li>Internet of Things</li>
+        </ul>
+    </p>
+    <h2>Random Fun Fact About Me! </h2>
+    <p> Click the button for a fun fact about me! <input  id="rand" type="button" value="Random Fact" onclick="randFact()"> </p>
+    <p id="fn"> </p>
+</body>
+<script>
+    function randFact ()
+{
+    let facts=new Array('N/A','My favorite color is turquoise', 'The only bone I have broke is my nose from a line drive play in baseball.', 'I have been out of the USA multiple times, and I love to travel!', 'My nicknames are sweet Keat, Hutch, and Keats' , 'My favorite number has been 6 all my life.');
+    let ranFact = 1 + Math.floor(Math.random() * 5); 
+    let fun = '';
+    for(i = 0; i <= 5; i++)
+    {  
+        if(i == ranFact)
+        {
+        fun = facts[i]; 
+        }
+    }
+    document.getElementById('fn').innerText= fun;   
+}
+</script>
+</html>

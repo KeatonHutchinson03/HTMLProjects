@@ -23,6 +23,7 @@ h2 , h1 {
 </head>
 <body>
     <h1> Keaton Hutchinson's Webpage</h1>
+    <p id="Date"> </p>
     <p> <img src="\IMG_2085" alt="Picture of Dashing Young Man"> </p>
     <h2> A little bit about me...</h2>
     <p>Hi! My name is Keaton Hutchinson, and I was born in Savannah, Georgia on August 5th, 2003.  </p>
@@ -66,6 +67,17 @@ h2 , h1 {
     <p id="fn"> </p>
 </body>
 <script>
+    function today_date()
+{
+    let myDate;
+    let year, month, my_date;
+    myDate = new Date(); 
+    year = myDate.getFullYear();
+    month = myDate.getMonth(); 
+    my_date = myDate.getDate();
+
+    document.getElementById("Today: " + "<br>Year: " + year + "<br>Month: " + (month+1) + "<br>Date: " + my_date);
+}
     function randFact ()
 {
     let facts=new Array('N/A','My favorite color is turquoise', 'The only bone I have broke is my nose from a line drive play in baseball.', 'I have been out of the USA multiple times, and I love to travel!', 'My nicknames are sweet Keat, Hutch, and Keats' , 'My favorite number has been 6 all my life.');

@@ -4,13 +4,24 @@
     <title>Keaton Hutchinson's Webpage</title>
     <meta charset = "utf-8"> 
     <style>
+img {
+    width: 300px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 html {
-    color:red;
+    color:mediumaquamarine;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black;
+    object-position: center;
+    border-style: groove;
+    border-width: 6px;
+    border-color: mediumaquamarine;
 }
 h2 , h1 {
     text-align: center;
@@ -23,6 +34,7 @@ h2 , h1 {
 </head>
 <body>
     <h1> Keaton Hutchinson's Webpage</h1>
+    <p> <img src="IMG_2085.jpg" alt="Picture of Dashing Young Man"> </p>
     <p> <img src="\IMG_2085.jpg" alt="Picture of Dashing Young Man"> </p>
     <h2> A little bit about me...</h2>
     <p>Hi! My name is Keaton Hutchinson, and I was born in Savannah, Georgia on August 5th, 2003.  </p>
@@ -34,7 +46,7 @@ h2 , h1 {
     <p>the future. This is when I thought about a video game programming class I took in highschool.</p>
     <p>I realized I throughly enjoyed working with computers and enjoyed writing the code to see the</p>
     <p>end results. I made my switch to Computing: Information Technology Systems and haven't looked</p>
-    <p>looked past since! Within my first semester, my interest on what I could do with this new found</p>
+    <p>back past since! Within my first semester, my interest on what I could do with this new found</p>
     <p>love for programming grew astronomically! I am glad I made the switch to my new major and cannot</p>
     <p>wait to work within software development, IOS app development, Webdesign, and so much more!</p>
     <h2> My Hobbies </h2>
@@ -62,10 +74,24 @@ h2 , h1 {
         </ul>
     </p>
     <h2>Random Fun Fact About Me! </h2>
-    <p> Click the button for a fun fact about me! <input  id="rand" type="button" value="Random Fact" onclick="randFact()"> </p>
+    <p> Click the button for a fun fact about me! <input type="button" value="Random Fact" onclick="randFact()"> </p>
     <p id="fn"> </p>
+    <h2>What is Today's Date?</h2>
+    <p> Click the button to get the date <input type="button" value="Today's Date" onclick="GettodayDate()"></p>
+    <p id="today_Date"></p>
 </body>
 <script>
+    function GettodayDate()
+{
+    let myDate;
+    let year, month, my_date;
+    myDate = new Date(); 
+    year = myDate.getFullYear();
+    month = myDate.getMonth(); 
+    my_date = myDate.getDate();
+
+    document.getElementById('today_Date').innerText= `Today's Date\n` + (month+1) + "/" + my_date + "/" + year;
+}
     function randFact ()
 {
     let facts=new Array('N/A','My favorite color is turquoise', 'The only bone I have broke is my nose from a line drive play in baseball.', 'I have been out of the USA multiple times, and I love to travel!', 'My nicknames are sweet Keat, Hutch, and Keats' , 'My favorite number has been 6 all my life.');
